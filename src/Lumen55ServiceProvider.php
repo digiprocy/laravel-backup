@@ -86,7 +86,7 @@ class Lumen55ServiceProvider extends ServiceProvider {
      */
     private function registerShellProcessor() {
         $this->app->bind(\BackupManager\ShellProcessing\ShellProcessor::class, function () {
-            return new ShellProcessor(new Process(''));
+            return new ShellProcessor(new Process([], null, null, null, null));
         });
     }
 
